@@ -40,7 +40,7 @@ So that’s it! Happy Physical Webbing!
 
 Please note that this app has been targeting Android L release (21) and has been tested primarily on the Nexus 5.
 
-## Building
+## Building from Scratch
 First, download the Android SDK if you have not already and install the Extras and Android L packages. These steps assume you are building on Linux.
 ```
 $ wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
@@ -55,6 +55,12 @@ Next, download the source from github and build the client using gradle.
 $ git clone https://github.com/google/physical-web
 $ cd physical-web/android/PhysicalWeb/
 $ echo "sdk.dir=/path/to/android/sdk" > local.properties
+$ gedit app/build.gradle &
+$ echo "Change the compile sdk version to 20 now!"
+$ echo "Add the following to the android section:"
+$ echo "    lintOptions {"
+$ echo "        abortOnError false"
+$ echo "    }"
 $ ./gradlew 
 $ ./gradlew build
 ```
