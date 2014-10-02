@@ -39,3 +39,20 @@ If you tap the notification, it will bring you back to the list of the nearby be
 So that’s it! Happy Physical Webbing!
 
 Please note that this app has been targeting Android L release (21) and has been tested primarily on the Nexus 5.
+
+## Building
+First, download the Android SDK if you have not already and install the Extras and Android L packages. These steps assume you are building on Linux.
+```
+$ wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
+$ tar zxvf android-sdk_r23.0.2-linux.tgz
+$ cd android-sdk-linux/tools/
+$ ./android &
+```
+
+Next, build the client.
+```
+$ git clone https://github.com/google/physical-web
+$ cd physical-web/android/PhysicalWeb/
+$ echo 'sdk.dir=/path/to/android/sdk' > local.properties
+$ ./gradlew 
+```
