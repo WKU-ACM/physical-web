@@ -64,3 +64,8 @@ $ echo "    }"
 $ ./gradlew 
 $ ./gradlew build
 ```
+
+Finally, it the build completes without errors, you can find your build at:
+```
+$ cd app/build/outputs/apk
+```
